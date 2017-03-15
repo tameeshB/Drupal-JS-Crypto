@@ -19,3 +19,10 @@ client_side_encryption.genKeys:
     _title: 'Client-Side Encrypt'
   requirements:
     _permission: 'access content'
+client_side_encryption.emptyKeys:
+  path: '/cse/empty'
+  defaults:
+    _controller: '\Drupal\client_side_encryption\Controller\client_side_encryptionController::emptyKeys'
+    _title: 'Client-Side Encrypt'
+  requirements:
+    _permission: 'access content'

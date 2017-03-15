@@ -56,4 +56,22 @@ class client_side_encryptionController extends ControllerBase {
     return $output;
   }
 
+  public function emptyKeys() {
+    $output= [];
+    $output['cont'] = [
+      '#type' => 'markup',
+      '#markup' => $this->t('Keys emptied! <a href="@url">Generate Keys again!</a>',array('@url'=>'gen')),
+      '#attached' => [
+        'library' => [
+          'client_side_encryption/cryptJSempty',
+        ],
+      ],
+    ];
+    $output['status'] = [
+      '#type' => 'markup',
+      '#markup' => $this->t(''),
+    ];
+    return $output;
+  }
+
 }

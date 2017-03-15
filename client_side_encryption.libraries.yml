@@ -12,3 +12,10 @@ cryptJSgen:
     js/jsencrypt.js: {}
   dependencies:
   - core/jquery
+cryptJSempty:
+  version: 1.x
+  js:
+    js/emptyKeys.js: {}
+    js/jsencrypt.js: {}
+  dependencies:
+  - core/jquery
