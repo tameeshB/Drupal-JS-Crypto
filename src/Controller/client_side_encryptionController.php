@@ -12,10 +12,10 @@ class client_side_encryptionController extends ControllerBase {
    * @return array
    */
   public function viewData() {
-    return array(
+    return [
       '#type' => 'markup',
       '#markup' => $this->t('The secret data is displayed below:'),
-    );
+    ];
   }
 
   /**
@@ -24,10 +24,13 @@ class client_side_encryptionController extends ControllerBase {
    * @return array
    */
   public function storeData() {
-    return array(
+    $output= [];
+    $output['cont'] = [
       '#type' => 'markup',
       '#markup' => $this->t('Enter your plain text you want to encrypt below:'),
-    );
+    ];
+    $output['form']= \Drupal::formBuilder()->getForm('\Drupal\client_side_encryption\Form\putdataForm');
+    return $output;
   }
 
 }

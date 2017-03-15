@@ -24,7 +24,7 @@ class putdataForm extends FormBase {
     );
     $form['show'] = array(
       '#type' => 'submit',
-      '#value' => $this->t('Encrypt!'),
+      '#value' => $this->t('Encrypt!' ),
     );
     return $form;
   }
