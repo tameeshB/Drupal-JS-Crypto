@@ -1,7 +1,14 @@
 client_side_encryption.content:
-  path: '/csEncrypt'
+  path: '/cse/view'
   defaults:
-    _controller: '\Drupal\client_side_encryption\Controller\client_side_encryptionController::content'
-    _title: 'Client-Side Encrypt'
+    _controller: '\Drupal\client_side_encryption\Controller\client_side_encryptionController::viewData'
+    _title: 'Client-Side Encrypt View Data'
+  requirements:
+    _permission: 'access content'
+client_side_encryption.form:
+  path: '/cse/store'
+  defaults:
+    _form: '\Drupal\client_side_encryption\Form\putdataForm'
+    _title: 'Client-Side Encrypt Store secret Data'
   requirements:
     _permission: 'access content'
