@@ -18,24 +18,25 @@ class putdataForm extends FormBase {
 
   public function buildForm(array $form, FormStateInterface $form_state) {
     // Create a $form API array.
-    $form['email'] = array(
+    $form['data'] = array(
       '#type' => 'textarea',
       '#title' => $this->t('Secret Data that you want to encrypt.')
     );
     $form['show'] = array(
       '#type' => 'submit',
-      '#value' => $this->t('Submit '),
+      '#value' => $this->t('Encrypt!'),
     );
     return $form;
   }
 
   public function validateForm(array &$form, FormStateInterface $form_state) {
-     if (!isset($form_state['values']['email'])) {
-      $this->setFormError('email', $form_state, $this->t('Data must be set'));
+     if ($form_state->getValue('data')==NULL) {
+      $form_state->setErrorByName('data', t('Data field can\'t be empty'));
      } 
   }
 
   public function submitForm(array &$form, FormStateInterface $form_state) {
-   drupal_set_message($this->t('Your email address is @email', array('@email' => $form_state['values']['email'])));
+   drupal_set_message($this->t('Your data is @data', array('@data' =>  $form_state->getValue('data'))));
+
   }
 }
