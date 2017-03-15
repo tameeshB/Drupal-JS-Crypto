@@ -1,4 +1,4 @@
-hello_world.admin:
+client_side_encryption.admin:
   title: 'csEncrypt settings'
   description: 'Client-Side Encryption Demostration'
   parent: system.admin_config_development

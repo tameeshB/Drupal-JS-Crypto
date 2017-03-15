@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains \Drupal\client_side_encryption\Form\putdataForm.
+ * Contains \Drupal\client_side_encryption\Form.
  */
 
 namespace Drupal\client_side_encryption\Form;
@@ -20,7 +20,7 @@ class putdataForm extends FormBase {
     // Create a $form API array.
     $form['data'] = array(
       '#type' => 'textarea',
-      '#title' => $this->t('Secret Data that you want to encrypt.')
+      '#title' => $this->t('Enter the sensitive data that you want to encrypt and save.')
     );
     $form['show'] = array(
       '#type' => 'submit',

@@ -2,13 +2,20 @@ client_side_encryption.content:
   path: '/cse/view'
   defaults:
     _controller: '\Drupal\client_side_encryption\Controller\client_side_encryptionController::viewData'
-    _title: 'Client-Side Encrypt View Data'
+    _title: 'Client-Side Encrypt'
   requirements:
     _permission: 'access content'
 client_side_encryption.storeData:
   path: '/cse/store'
   defaults:
     _controller: '\Drupal\client_side_encryption\Controller\client_side_encryptionController::storeData'
-    _title: 'Client-Side Encrypt Store secret Data'
+    _title: 'Client-Side Encrypt'
+  requirements:
+    _permission: 'access content'
+client_side_encryption.genKeys:
+  path: '/cse/gen'
+  defaults:
+    _controller: '\Drupal\client_side_encryption\Controller\client_side_encryptionController::genKeys'
+    _title: 'Client-Side Encrypt'
   requirements:
     _permission: 'access content'

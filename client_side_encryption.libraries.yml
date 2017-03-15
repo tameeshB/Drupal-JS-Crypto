@@ -1,0 +1,14 @@
+cryptJSencrypt:
+  version: 1.x
+  js:
+    js/encrypt.js: {}
+    js/jsencrypt.js: {}
+  dependencies:
+  - core/jquery
+cryptJSgen:
+  version: 1.x
+  js:
+    js/generate.js: {}
+    js/jsencrypt.js: {}
+  dependencies:
+  - core/jquery
