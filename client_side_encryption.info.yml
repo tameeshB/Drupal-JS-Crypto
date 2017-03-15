@@ -1,0 +1,7 @@
+name: Client-Side Cryptography
+description: Module implementing a basic zero-knowledge system.
+package: Security
+type: module
+version: 1.0
+configure: client_side_encryption.settings
+core: 8.x

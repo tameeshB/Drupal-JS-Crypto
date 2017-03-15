@@ -1,0 +1,6 @@
+name: Client-Side Cryptography
+description: Module implementing a basic zero-knowledge system.
+package: Custom
+type: module
+version: 1.0
+core: 8.x

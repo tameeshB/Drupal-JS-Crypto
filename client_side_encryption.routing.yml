@@ -1,0 +1,7 @@
+client_side_encryption.content:
+  path: '/csEncrypt'
+  defaults:
+    _controller: '\Drupal\client_side_encryption\Controller\client_side_encryptionController::content'
+    _title: 'Client-Side Encrypt'
+  requirements:
+    _permission: 'access content'
