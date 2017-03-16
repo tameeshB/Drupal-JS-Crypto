@@ -15,6 +15,11 @@ class client_side_encryptionController extends ControllerBase {
     return [
       '#type' => 'markup',
       '#markup' => $this->t('The secret data is displayed below:'),
+      '#attached' => [
+        'library' => [
+          'client_side_encryption/cryptJSview',
+        ],
+      ],
     ];
   }
 

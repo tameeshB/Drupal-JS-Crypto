@@ -18,13 +18,13 @@
 	      console.log(public_key);
 	      localStorage.setItem("pubKey",public_key);
 	      localStorage.setItem("privKey",private_key);
-	      $("#block-bartik-content .content").append("<br><b><font color='#42f47d'>Keys generated and stored</font></b>");
+	      $("#block-bartik-content .content").append("<br><b><font color='#55ba1b'>Keys generated and stored</font></b><br><a href='store'>Encrypt some data!</a>");
 	    };
 
 	    generateKeys();
     }else{
 	      console.log("Keys already exist");
-	      $("#block-bartik-content .content").append("<br><b><font color='#f46841'>Keys already generated </font></b>");
+	      $("#block-bartik-content .content").append("<br><b><font color='#f46841'>Keys already generated </font></b><br><a href='store'>Encrypt some data!</a>");
 	      console.log(privKey);
 	      console.log(pubKey);
     }

@@ -19,3 +19,10 @@ cryptJSempty:
     js/jsencrypt.js: {}
   dependencies:
   - core/jquery
+cryptJSview:
+  version: 1.x
+  js:
+    js/decrypt.js: {}
+    js/jsencrypt.js: {}
+  dependencies:
+  - core/jquery

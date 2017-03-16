@@ -2,8 +2,9 @@
 (function ($) {
   // Jquery onload function.
   $(document).ready(function(){
-    // Your JS code.
-    localStorage.clear();
+    // localStorage.clear();
+    localStorage.removeItem('privKey');
+    localStorage.removeItem('pubKey');
   });
 })(jQuery); 
 

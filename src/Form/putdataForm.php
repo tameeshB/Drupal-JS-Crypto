@@ -22,6 +22,10 @@ class putdataForm extends FormBase {
       '#type' => 'textarea',
       '#title' => $this->t('Enter the sensitive data that you want to encrypt and save.')
     );
+    $form['pubKey'] = array(
+      '#type' => 'hidden',
+      '#value' => $this->t('/publickeyhere/')
+    );
     $form['show'] = array(
       '#type' => 'submit',
       '#value' => $this->t('Encrypt!' ),
