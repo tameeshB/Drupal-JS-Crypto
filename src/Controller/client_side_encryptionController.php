@@ -11,6 +11,18 @@ class client_side_encryptionController extends ControllerBase {
    *
    * @return array
    */
+  public function home() {
+    return [
+      '#type' => 'markup',
+      '#markup' => $this->t('Menu for this module<br>You can perform encryption operations on the client side using this module<br>Try it out:<br><ul><li><a href=":gen">Generate and store Keys</a></li><li><a href=":empty">Empty Keys</a></li><li><a href=":store">Encrypt data</a></li><li><a href=":view">Decrypt and View</a></li><ul>',array(':gen'=>'./gen',':empty'=>'./empty',':store'=>'./store',':view'=>'./view')),
+    ];
+  }
+
+  /**
+   * Display the markup for viewData page.
+   *
+   * @return array
+   */
   public function viewData() {
     return [
       '#type' => 'markup',
@@ -57,6 +69,21 @@ class client_side_encryptionController extends ControllerBase {
     $output['status'] = [
       '#type' => 'markup',
       '#markup' => $this->t(''),
+    ];
+    redo:
+    $pID=rand(1000,9999);
+    $result = \Drupal::database()->query('SELECT accessKey FROM {cseStore} WHERE cid = :personID', array(':personID'=>$pID))->fetchAll();
+    foreach ($result as $record) {
+      $accessK = $record->accessKey;
+    }
+    if(!isset($accessK)){
+      $accessK = $pID;
+    }else{
+      goto redo;
+    }
+    $output['pID'] = [
+      '#type' => 'markup',
+      '#markup' => $this->t('<span id="pid" style="display:none">'.$accessK.'</span>'),
     ];
     return $output;
   }

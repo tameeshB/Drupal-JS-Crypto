@@ -1,3 +1,10 @@
+client_side_encryption.home:
+  path: '/cse'
+  defaults:
+    _controller: '\Drupal\client_side_encryption\Controller\client_side_encryptionController::home'
+    _title: 'Client-Side Encrypt :: Home - Menu'
+  requirements:
+    _permission: 'access content'
 client_side_encryption.content:
   path: '/cse/view'
   defaults:
